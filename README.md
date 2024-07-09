@@ -1,7 +1,7 @@
+[![CMake on multiple platforms](https://github.com/cosmo-sims/monofonIC/actions/workflows/cmake-multi-platform.yml/badge.svg)](https://github.com/cosmo-sims/monofonIC/actions/workflows/cmake-multi-platform.yml)
+
 # MUSIC2 - monofonIC
 Modular high-precision IC generator for cosmological simulations. MUSIC2-monofonIC is for non-zoom full box ICs (use [MUSIC](https://bitbucket.org/ohahn/music) for zooms, MUSIC2 for zooms is in the works).
-
-[![CMake on multiple platforms](https://github.com/cosmo-sims/monofonIC/actions/workflows/cmake-multi-platform.yml/badge.svg)](https://github.com/cosmo-sims/monofonIC/actions/workflows/cmake-multi-platform.yml)
 
 Note that this program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY.
 
