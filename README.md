@@ -53,6 +53,7 @@ If you use MUSIC2-monofonIC in your scientific work, you are required to acknowl
 
 - For baryon+CDM sims, or PPT numerics related aspects: Hahn et al. 2020 [arXiv:2008.09124](https://arxiv.org/abs/2008.09124)
 
+You can find the respective BibTeX entries in the enclosed CITATION.bib file.
 
 ## Acknowledgments
 
