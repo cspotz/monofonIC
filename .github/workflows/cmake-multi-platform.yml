@@ -52,7 +52,7 @@ jobs:
         # Print the CMake version.
         cmake --version   
         # Install the necessary libraries
-        sudo apt-get install libfftw3-dev -y
+        sudo apt-get install libfftw3-mpi-dev libfftw3-dev -y
         sudo apt-get install libgsl-dev -y
         sudo apt-get install libhdf5-serial-dev -y
         sudo apt-get install openmpi-bin libopenmpi-dev -y
