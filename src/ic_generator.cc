@@ -213,8 +213,8 @@ int run( config_file& the_config )
     const real_t astart = 1.0/(1.0+zstart);
     const real_t volfac(std::pow(boxlen / ngrid / 2.0 / M_PI, 1.5));
 
-    the_cosmo_calc->write_powerspectrum(astart, "input_powerspec.txt" );
-    the_cosmo_calc->write_transfer("input_transfer.txt" );
+    the_cosmo_calc->write_powerspectrum(astart, the_config.get_path_relative_to_config("input_powerspec.txt"));
+    the_cosmo_calc->write_transfer(the_config.get_path_relative_to_config("input_transfer.txt"));
 
     // the_cosmo_calc->compute_sigma_bc();
     // abort();
@@ -776,7 +776,7 @@ int run( config_file& the_config )
                 }, psi);
 
                 the_output_plugin->write_grid_data( rho, this_species, fluid_component::density );
-                rho.Write_PowerSpectrum("input_powerspec_sampled_evolved_semiclassical.txt");
+                rho.Write_PowerSpectrum(the_config.get_path_relative_to_config("input_powerspec_sampled_evolved_semiclassical.txt"));
                 rho.FourierTransformBackward();
                 
                 //======================================================================
