@@ -235,33 +235,33 @@ public:
                 << std::setw(20) << ("P_deltam")
                 << std::setw(20) << ("P_deltac")
                 << std::setw(20) << ("P_deltab")
-                << std::setw(20) << ("P_deltabc")
-                << std::setw(20) << ("P_thetam")
-                << std::setw(20) << ("P_thetac")
-                << std::setw(20) << ("P_thetab")
-                << std::setw(20) << ("P_thetabc")
+                // << std::setw(20) << ("P_deltabc")
+                // << std::setw(20) << ("P_thetam")
+                // << std::setw(20) << ("P_thetac")
+                // << std::setw(20) << ("P_thetab")
+                // << std::setw(20) << ("P_thetabc")
                 << std::endl;
 
             for (double k = kmin; k < transfer_function_->get_kmax(); k *= 1.01)
             {
-                const double dm  = this->get_amplitude(k, delta_matter) * Dplus_start_ / Dplus_target_;
+                const double dm  = this->get_amplitude(k, delta_matter) * Dplus_start_; // / Dplus_target_;
                 const double dbc = this->get_amplitude(k, delta_bc);
                 const double db  = dm + fc * dbc;
                 const double dc  = dm - fb * dbc;
-                const double tm  = this->get_amplitude(k, delta_matter) * Dplus_start_ / Dplus_target_;
-                const double tbc = this->get_amplitude(k, theta_bc);
-                const double tb  = dm + fc * dbc;
-                const double tc  = dm - fb * dbc;
+                // const double tm  = this->get_amplitude(k, theta_matter) * Dplus_start_; // / Dplus_target_;
+                // const double tbc = this->get_amplitude(k, theta_bc);
+                // const double tb  = dm + fc * dbc;
+                // const double tc  = dm - fb * dbc;
                 
                 ofs << std::setw(20) << std::setprecision(10) << k
                     << std::setw(20) << std::setprecision(10) << std::pow(dm,2)
                     << std::setw(20) << std::setprecision(10) << std::pow(dc,2)
                     << std::setw(20) << std::setprecision(10) << std::pow(db,2)
-                    << std::setw(20) << std::setprecision(10) << std::pow(dbc + 2 * tbc * (std::sqrt( Dplus_target_ / Dplus_start_ ) - 1.0),2)
-                    << std::setw(20) << std::setprecision(10) << std::pow(tm / std::pow( Dplus_start_ / Dplus_target_, 0.5 ),2)
-                    << std::setw(20) << std::setprecision(10) << std::pow(tc / std::pow( Dplus_start_ / Dplus_target_, 0.5 ),2)
-                    << std::setw(20) << std::setprecision(10) << std::pow(tb / std::pow( Dplus_start_ / Dplus_target_, 0.5 ),2)
-                    << std::setw(20) << std::setprecision(10) << std::pow(tbc / std::pow( Dplus_start_ / Dplus_target_, 0.5 ),2)
+                    // << std::setw(20) << std::setprecision(10) << std::pow(dbc + 2 * tbc * (std::sqrt( Dplus_target_ / Dplus_start_ ) - 1.0),2)
+                    // << std::setw(20) << std::setprecision(10) << std::pow(tm / std::pow( Dplus_start_ / Dplus_target_, 0.5 ),2)
+                    // << std::setw(20) << std::setprecision(10) << std::pow(tc / std::pow( Dplus_start_ / Dplus_target_, 0.5 ),2)
+                    // << std::setw(20) << std::setprecision(10) << std::pow(tb / std::pow( Dplus_start_ / Dplus_target_, 0.5 ),2)
+                    // << std::setw(20) << std::setprecision(10) << std::pow(tbc / std::pow( Dplus_start_ / Dplus_target_, 0.5 ),2)
                     << std::endl;
                 // ofs << std::setw(20) << std::setprecision(10) << k
                 //     << std::setw(20) << std::setprecision(10) << std::pow(this->get_amplitude(k, delta_matter)*Dplus_start_, 2.0)
